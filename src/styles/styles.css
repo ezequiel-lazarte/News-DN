@@ -1,0 +1,34 @@
+.main-bg {
+    background-color: rgb(48, 48, 48);
+}
+
+.article-bg {
+    background-color: rgb(21, 161, 226);
+}
+
+.div-img {
+    width: 98%;
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+.imgNew {
+    width: 60%;
+    height: auto;
+    margin: 1em;
+}
+
+.imgNew:hover {
+    transition: 1s;
+    width: 70%;
+    height: auto;
+}
+
+.load-main {
+    height: 100vh ;
+}
+
+.title-h4 {
+    font-size: 1.5em;
+    text-align: center;
+}
