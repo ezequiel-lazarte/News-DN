@@ -19,7 +19,7 @@ const Login = () => {
                     setMsgError('La contraseña debe tener 6 caracteres o mas');
                 }
                 if(err.code === "auth/invalid-email") {
-                    setMsgError('Formato de Email incorrecto');
+                    setMsgError('Formato de e-mail incorrecto');
                 }
                 if(!pass.trim()) {
                     setMsgError('La contraseña no puede estar vacia');
@@ -40,7 +40,7 @@ const Login = () => {
                 setMsgError('Contraseña incorrecta');
             }
             if(err.code === 'auth/user-not-found') {
-                setMsgError('Email incorrecto');
+                setMsgError('e-mail incorrecto');
             }
             if(!pass.trim()) {
                 setMsgError('La contraseña no puede estar vacia');
@@ -55,30 +55,30 @@ const Login = () => {
         <div className="row mt-5">
             <div className="col"></div>
             <div className="col">
-                <h4 className="title-h4 mb-3">Registrese o Inicie Sesión</h4>
+                <h4 className="title-h4 mb-3">Registrarse o iniciar sesión</h4>
                 <form className="form-group" onSubmit={RegistrarUsuario}>
                     <input 
                         onChange={(e) => {setEmail(e.target.value)}}
                         className="form-control mt-4 mb-4"
-                        placeholder="Introduce el Mail"
+                        placeholder="Correo electrónico"
                         type="email" 
                     />
                     <input 
                         onChange={(e) => {setPass(e.target.value)}}
                         className="form-control mt-4 mb-4"
-                        placeholder="Introduce la Contraseña"
+                        placeholder="Introduce tu contraseña"
                         type="password" 
                     />
                     <input 
                         className="btn btn-dark w-100 mt-4 mb-4"
-                        value="Registrar Usuario"
+                        value="Registrar usuario"
                         type="submit" 
                     />
                 </form>
                 <button 
                     onClick={IniciarSesion}
                     className="btn btn-success w-100"
-                >Iniciar Sesión</button>
+                >Iniciar sesión</button>
                 {
                     msgError != null ? 
                     (

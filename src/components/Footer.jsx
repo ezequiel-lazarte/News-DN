@@ -8,7 +8,7 @@ const Footer = () => {
             <footer>
                 <div className="row">
                     <div className="col">
-                        <p className="mx-4 my-2 text-center text-white">Derechos Reservados Ezequiel Lazarte © 2021</p>
+                        <p className="mx-4 my-2 text-center text-white">Derechos reservados Ezequiel Lazarte © 2022</p>
                     </div>
                     <div className="col text-center">
                         <a href="https://www.linkedin.com/in/ezequiel-lazarte">

@@ -7,16 +7,21 @@ const Main = () => {
 
     const request = async() => {
         const url = 'https://api.jornalia.net/api/v1/articles';
-        try {
-            const res = await fetch(`${url}?apiKey=${key}&search=coronavirus+d%C3%B3lar&providers=Clarin%2CPagina12%2CLaNacion%2CTelam&categories=POLITICA%2CECONOMIA%2CSALUD&startDate=2020-10-01&endDate=2020-10-31`, {
-                "method": "GET"
-            });
-            const json = await res.json();
-            setInfo(json);
-        } catch(err) {
-            console.log(err);
-        }
+        fetch(`${url}?apiKey=${key}&search=coronavirus+d%C3%B3lar&providers=Clarin%2CPagina12%2CLaNacion%2CTelam&categories=POLITICA%2CECONOMIA%2CSALUD&startDate=2020-10-01&endDate=2020-10-31`, {
+            "method": "GET",
+            "headers": {
+                "Content-Type": "application/json"
+            }
+        })
+        .then(res => {
+            setInfo(res.json());
+        })
+        .catch(err => {
+            console.error(err);
+        }); 
     }
+
+    
     
 
     useEffect(() => {
